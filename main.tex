@@ -1,24 +1,100 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{graphicx} % Required for inserting images
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
-\usepackage{graphicx} % Necessário para usar imagem
-\usepackage{geometry}
+\usepackage[outline]{contour} % glow around text
+\usepackage{lipsum}
+\usepackage{amsmath} % For align environment
 
-% Configurar as coisas de geometria
-\geometry{hmargin=1cm, vmargin=2cm}
-
-%opening
-\title{Segunda Lista de Física 1}
-\author{
-    Italo Miguel M. F. Leite \\
-    \href{mailto:italommfleite@fisica.ufmt.br}{italommfleite@fisica.ufmt.br}
-}
-
-\date{19 de agosto de 2024}
+\title{Segunda Lista de Fisica I}
+\author{Italo Leite}
+\date{Agosto de 2024}
 
 \begin{document}
-
-\maketitle
-
-
+	
+	\maketitle
+	
+	\begin{flushleft}
+		\textbf{1. } Normalmente é possível fazer uma viagem de carro de San Diego a Los Angeles com velocidade média de 105 km/h, em 2h20min. Em uma tarde de sexta-feira, contudo, o trânsito está muito pesado e você percorre a mesma distância com um velocidade média de 70 km/h. calcule o tempo que você leva nesse percurso.
+		
+		\textbf{reposta:}
+		
+		Primeiro precisamos identificar a distância que ele percorre ao viajar por 2h20min em um velocidade média de 105 km/h. Para isso vamos utilizar a equação horária do espaço.
+		
+		\begin{equation*}
+			s(t) = s_0 + v.t
+		\end{equation*}
+		
+		Pegando de referência que o que o espaço inicial seja zero, então podemos fazer com que $s_0 = 0$ e ignorarmos ele na questão, deixando a equação da seguinte forma:
+		
+		\begin{equation*}
+			s(t) = v.t
+		\end{equation*}
+		
+		Onde o v é a velocidade média do automóvel, que é 105 km/h e o t é o tempo, que é 3h20min. Mas não podemos fazer essa multiplicação, pois as horas ou devem estar apenas em horas ou apenas em minutos.
+		
+		A hora dada pela questão é 2h20min. Como dito anteriormente, precisamos deixar apenas em horas ou apenas em minutos. Como a velocidade é km/h, a melhor opção é deixa-la em horas. Então
+		
+		\begin{equation*}
+			t_1=2h \times \frac{60 min}{1 h} 
+		\end{equation*}
+		\begin{equation*}
+			t_1 = 120 min 
+		\end{equation*}
+		
+		Onde, $t_1$ é o tempo de 2horas para minutos da viagem.
+		
+		Como achamos os minutos de 2 horas, podemos conseguir os minutos totais apenas somando com os 20 minutos restantes, achando assim o tempo total.
+		
+		\begin{equation*}
+			t_t = t_1 + t_2 \Rightarrow t_t = 120 min + 20 min
+		\end{equation*}
+		\begin{equation*}
+			t_t = 140 min
+		\end{equation*}
+		
+		
+		Onde, $t_t$ é o tempo total da viagem, $t_1$ é o tempo achado logo acima e $t_2$ são os 20min restantes que sobranram das 2h20min. 
+		
+		Podemos transformar agora esses 140 min em horas para fazer a equação seguinte
+		
+		\begin{equation*}
+			t_{th}= 140 min \times \frac{1h}{60 min} \Rightarrow 2,33 h 
+		\end{equation*}
+		
+		Onde $t_{th}$ é o tempo total em horas. Substituindo as horas e a velocidade média na equação horária do espaço fica da seguinte forma:
+		
+		\begin{equation*}
+			s(2,33h) =105 km/h \times 2,33h
+		\end{equation*}
+		\begin{equation*}
+			s(2,33h) =105 \times 2,33 \times \frac{km}{h} \times \frac{h}{1}
+		\end{equation*}
+		\begin{equation*}
+			s(2,33h) \approx 244,65 km
+		\end{equation*}
+		
+		Sabendo a distância total da viagem, podemos substis o s(t) por 244,65 km e a velocidade do automóvel por 70 km/h. Deixando a equação da seguinte forma:
+		
+		\begin{equation*}
+			244,65 km = 70 km/h\times t 
+		\end{equation*}
+		
+		Isolando o t para achar o tempo.
+		
+		\begin{equation*}
+			t = \frac{244,65 km}{70 km/h} 
+		\end{equation*}
+		\begin{equation*}
+			t = \frac{244,65 km}{70 km/h} \times \frac{km}{1} \times \frac{h}{km} 
+		\end{equation*}
+		\begin{equation*}
+			t = 3,5h 
+		\end{equation*}
+		O tempo total de viajem seria de 3,5 horas se ele viajar a uma velocidade média de 70 km/h. Ou seja, seria de 3h30min de viagem.
+		
+	\end{flushleft}
+	
+	
 \end{document}
