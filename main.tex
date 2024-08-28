@@ -6,6 +6,20 @@
 \usepackage[outline]{contour} % glow around text
 \usepackage{lipsum}
 \usepackage{amsmath} % For align environment
+\usepackage{cancel}
+\usepackage{blindtext}
+
+%Desenhar gráfico
+\usepackage{tikz}
+\usepackage{tkz-fct}
+
+\usepackage{pgfplots}
+
+
+% Estou colocando 2 de espaço por cada pergunta
+
+% Personalizando as coisas do latex
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
 
 \title{Segunda Lista de Fisica I}
 \author{Italo Leite}
@@ -37,7 +51,7 @@
 		A hora dada pela questão é 2h20min. Como dito anteriormente, precisamos deixar apenas em horas ou apenas em minutos. Como a velocidade é km/h, a melhor opção é deixa-la em horas. Então
 		
 		\begin{equation*}
-			t_1=2h \times \frac{60 min}{1 h} 
+			t_1=2 \cancel{h} \times \frac{60 min}{1 \cancel{h}} 
 		\end{equation*}
 		\begin{equation*}
 			t_1 = 120 min 
@@ -60,7 +74,7 @@
 		Podemos transformar agora esses 140 min em horas para fazer a equação seguinte
 		
 		\begin{equation*}
-			t_{th}= 140 min \times \frac{1h}{60 min} \Rightarrow 2,33 h 
+			t_{th}= 140 \cancel{min} \times \frac{1h}{60 \cancel{min}} \Rightarrow 2,33 h 
 		\end{equation*}
 		
 		Onde $t_{th}$ é o tempo total em horas. Substituindo as horas e a velocidade média na equação horária do espaço fica da seguinte forma:
@@ -69,7 +83,7 @@
 			s(2,33h) =105 km/h \times 2,33h
 		\end{equation*}
 		\begin{equation*}
-			s(2,33h) =105 \times 2,33 \times \frac{km}{h} \times \frac{h}{1}
+			s(2,33h) =105 \times 2,33 \times \frac{km}{\cancel{h}} \times \frac{\cancel{h}}{1}
 		\end{equation*}
 		\begin{equation*}
 			s(2,33h) \approx 244,65 km
@@ -87,14 +101,210 @@
 			t = \frac{244,65 km}{70 km/h} 
 		\end{equation*}
 		\begin{equation*}
-			t = \frac{244,65 km}{70 km/h} \times \frac{km}{1} \times \frac{h}{km} 
+			t = \frac{244,65}{70} \times \frac{\cancel{km}}{1} \times \frac{h}{\cancel{km}} 
 		\end{equation*}
 		\begin{equation*}
 			t = 3,5h 
 		\end{equation*}
-		O tempo total de viajem seria de 3,5 horas se ele viajar a uma velocidade média de 70 km/h. Ou seja, seria de 3h30min de viagem.
+		O tempo total de viajem seria de 3,5 horas. Ou seja, seria de 3h30min de viagem.
+		
+		\vspace{2em}
+		
+		\textbf{2.} Dois corredores partem simultaneamente do mesmo ponto de uma pista circular de 200 m e correm em direções opostas. Um corre com uma velocidade constante de 6,20 m/s e o outro corre com uma velocidade  constante de 5,50 m/s. Quando eles se cruzam pela primeira vez, calcule: a) Por quanto tempo estão correndo; e, b) qual é a distância percorrida por cada um deles.
+		
+		\textbf{respsota: }
+		
+		A) Para resolver, precisamos imaginar uma linha retilínea que tem uma distância de 200 m. O corredor 1 vai começar na distância 0m e o segundo corredor irá começar na distância é de 200m. Como há apenas um movimento retilíneo uniforme, vamos utilizar a equação horária do espaço, que descrevemos da seguinte forma:
+		
+		\begin{equation*}
+			s(t) = s_0 + v \cdot t
+		\end{equation*}
+		
+		Onde o $s_0$ é o espaço inicial, $v$ é a velocidade constante e t é o dominio da função da imagem s(t).
+		
+		Pelo ponto de referência do x é crescente para a direita, o corredor dois irá andar negativamente em relação a trajetória.
+		
+		Fórmula para o corredor 1:
+		
+		\begin{equation*}
+			s_{c1}(t) = 6,20m/s \cdot t
+		\end{equation*}
+		
+		Fórmula para o corredor 2
+		\begin{equation*}
+			s_{c2}(t) = 200m - 5,50m/s \cdot t
+		\end{equation*}
+		
+		Para descorbri por quanto tempo eles correram para ambos se cruzarem, preciamos igualar as duas equações $s_{c1} = s_{c2}$, a equação deve ficar da seguinte forma:
+		
+		\begin{equation*}
+			6,20m/s \cdot t = 200m - 5,50m/s \cdot t
+		\end{equation*}
+		
+		Precisamos isolar o t e resolver a divisão para descobrir o tempo que permaneceram correndo.
+		
+		\begin{equation*}
+			t= \frac{200m}{11,70m/s} \approx 17,09s
+		\end{equation*}
+		
+		O tempo de corrida foi aproximadamente 17,09 segundos.
+		
+		B) Com o tempo de corrida de ambos, vou considerar que ambos iram sair do espaço 0 (zero) e vão correr ou caminhar positivamente.
+		
+		\begin{equation*}
+			s_{c1}(17,09s) = 6,20m/s \cdot 17,09s \approx 105,96m
+		\end{equation*}
+		\begin{equation*}
+			s_{c2}(17,09s) = 5,50m/s \cdot 17,09s \approx 93,99m
+		\end{equation*}
+		
+		Para saber se os calculos estão corretos, basta somar ambas distâncias se pe igual a 200m ou próximo de 200m.
+		
+		\begin{equation*}
+			s_{t} = s_{c1} + s_{c2} = 105,96m + 93,99m = 199,955m
+		\end{equation*}
+		
+		O erro acontece pois houve arredondamentos nas casas de decimais. Mas se tivesse feito os calculos com a precissão certa de cada número, o resultado seria 200m corretamente.
+		
+		
+		\vspace{2em}
+		
+		
+		\textbf{3.} Um carro para em um semáforo. A seguir ele percorre um trecho retilíneo de modo que sua distância ao sinal é dada por $x(t) = bt^2 - ct^3$, onde $b = 2,40m/s^2$ e $c = 0,120m/s^3$. A) Calcule a velocidade média do carro para o intervalo de tempo t = 0 até t = 10,0 s. b) calcule a velocidade instantânea do carro para i) t = 0; ii) t= 5,0 s; iii) t = 10,0 s. c) quanto tempo após o repouso o carro retorna novamente ao repouso?
+		
+		\textbf{resposta:}
+		
+		A) Para calcular a velocidade média precisa da seguinte equação
+		
+		\begin{equation*}\label{exercicio3eq1}
+			v_m = \frac{\Delta{x}}{\Delta{t}} = \frac{x_f - x_i}{t_f - t_i}
+		\end{equation*}
+		
+		Onde $x_f$ é a posição final do corpo, $x_i$ é a posição inicial do corpo, $t_f$ é o tempo final e $t_i$ é o tempo inicial. Agora precisamo calcular a velocidade média entre entre os intervalos t=0s até t=10s. Como não há uma termo idependente na questão, podemos ignorar o t=0s, pois vai dar algo menos 0 (zero).
+		
+		\begin{equation*}
+			v_m = \frac{x(10s) - x(0s)}{10s - 0s} \Rightarrow \frac{x(10s)}{10s}
+		\end{equation*}
+		\begin{equation*}
+			v_m = \frac{2,40m/s^2 \cdot (10s)^2 - 0,120m/s^3 \cdot (10s)^3}{10s}
+		\end{equation*}
+		\begin{equation*}
+			v_m = 12m/s
+		\end{equation*}
+		
+		B) Para calcular a velocidade instantânea precisamos primeiro derivar a função dada pela questão, pois a derivada do espaço é a velocidade instantânea.
+		
+		\begin{equation*}
+			\vec{v} = \dfrac{d\vec{x}(t)}{dt}
+		\end{equation*}
+		
+		Derivando vamos obter a equação da seguinte forma:
+		
+		\begin{equation*}
+			\vec{v}(t) = 4,80 \cdot m/s^2 \cdot t - 0,36 \cdot m/s^3 \cdot t^2
+		\end{equation*}
+		
+		i) Quando o $t=0s$ é 0 (zero), pois todos os termos vão se multiplicar por zero.
+		
+		ii) Verificando quando o $t=5,0s$
+		
+		\begin{equation*}
+			\vec{v}(5,0s) = 4,80 \cdot m/s^2 \cdot 5,0s - 0,36 \cdot m/s^3 \cdot (5,0s)^2
+		\end{equation*}
+		\begin{equation*}
+			\vec{v}(5,0s) = 15,00 m/s
+		\end{equation*}
+		
+		iii) Verificando quando o $t=10,0s$
+		
+		\begin{equation*}
+			\vec{v}(10,0s) = 4,80 \cdot m/s^2 \cdot 10,0s - 0,36 \cdot m/s^3 \cdot (10,0s)^2
+		\end{equation*}
+		\begin{equation*}
+			\vec{v}(10,0s) = 12,00 m/s
+		\end{equation*}
+		
+		Quando o $t=0s$ é zero, quando $t=5,0s$ a velocidade instantânea é  15,00m/s e quando o $t=10,0s$ a velocidade instantânea é 12,00m/s.
+		
+		C) Para achar quando o carro fica em repouso, basta substituir a velocidade dele igual a zero e isolar o tempo, ou seja:
+		
+		\begin{equation*}
+			0 = 4,80 \cdot m/s^2 \cdot t - 0,36 \cdot m/s^3 \cdot t^2
+		\end{equation*}
+		
+		Resolvendo a equação obtermos
+		
+		\begin{equation*}
+			t \approx 13,33s 
+		\end{equation*}
+		
+		O carro retorna ao repouso novamente depois de aproximadamente 13,33 segundos depois da sua partida.
+		
+		\vspace{2em}
+		
+		\textbf{4.} a velocidade de um carro em função do tempo é dada por $v_x(t) = \alpha + \beta \cdot t^2$, onde $\alpha = 3,0m/s$ e $\beta = 0,100 m/s^3$. A) Calcule a aceleração média do carro para o intervalo de tempo de t = 0 a t = 5,0 s. b) Calcule a aceleração instantânea para i) t = 0 a t = 5,0 s. c) desenhe gráficos acurados $v \times t$ e $a \times t$ para o movimento do carro entre t = 0 e t = 5,0s.
+		
+		\textbf{resposta:}
+		
+		A) Para calcular a aceleração média do carro no intervalo de tempo t = 0 até t = 5,0s precisamos da equação seguinte:
+		
+		\begin{equation*}
+			a_m = \frac{\Delta{\vec{v_x}}}{\Delta{t}} = \frac{v_x(t) - v_x(t_0)}{t - t_0}
+		\end{equation*}
+		
+		Substituindo os valores para os valores do intervalos desejado a equação fica da seguinte forma
+		
+		\begin{equation*}
+			a_m = \frac{v_x(5,0s) - v_x(0s)}{5,0s - 0s}   
+		\end{equation*}
+		\begin{equation*}
+			a_m = \frac{\cancel{3,0m/s} + 0,100m/s^3 \cdot (5,0s)^{\cancel{2}} \cancel{- 3,0m/s}}{ \cancel{5,0s} }   
+		\end{equation*}
+		\begin{equation*}
+			a_m = 0,100m/s^{\cancel{3}} \cdot 5,0 \cancel{s} = 0,5 m/s^2  
+		\end{equation*}
+		
+		A aceleração média de t=0s até t=10s é de $0,5m/s^2$.
+		
+		B) Para calcular a velocidade instantânea precisamos derivar a função $v_x(t)$.
+		
+		\begin{equation*}
+			\vec{a} = \dfrac{d\vec{v}}{dt} = 0,200m/s^3 \cdot t
+		\end{equation*}
+		
+		i) Não precisa fazer conta quando o t=0s, pois irá multiplicar a equação por zero e o resultado é $0m/s^2$.
+		
+		ii) Quando o t=5,0s o resultado é $1m/s^2$.
+		\begin{equation*}
+			\vec{a} = 0,200m/s^{\cancel{3}} \cdot 5,0\cancel{s} = 1m/s^2
+		\end{equation*}
+		
+		C)  
+		i) Desenhar o gráfico $v \times t$:
+		\begin{center}
+			\begin{tikzpicture}
+				\tkzInit[xmin=0,xmax=3, xstep=0.5, ymin=0, ymax=3, ystep=0.5]
+				\tkzAxeXY
+				\tkzGrid(0,0)(3,3)
+				
+				\tkzDrawY[label={\textit{t}}]
+				\tkzDrawX[label={\textit{v}}]
+				
+				\tkzFct[domain=0:3] {x} % Função que deseja plotar
+			\end{tikzpicture}  
+		
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=0, xmax=3, xstep=0.5, ymin=0, ymax=3, ystep=0.5,
+					xlabel={\textit{v}}, 
+					ylabel={\textit{t}},
+					
+					grid=both,
+					]
+					\addplot[blue, thick,domain=0:3] {3+0.1*x^2};
+				\end{axis}
+			\end{tikzpicture}  
+		\end{center}
 		
 	\end{flushleft}
-	
-	
 \end{document}
