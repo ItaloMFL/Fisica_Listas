@@ -85,16 +85,16 @@
 		Podemos transformar agora esses 140 min em horas para fazer a equação seguinte
 		
 		\begin{equation*}
-			t_{th}= 140 \cancel{min} \times \frac{1h}{60 \cancel{min}} \Rightarrow 2,33 h 
+			t_{th}= 140 \cancel{min} \cdot \frac{1h}{60 \cancel{min}} \Rightarrow 2,33 h 
 		\end{equation*}
 		
 		Onde $t_{th}$ é o tempo total em horas. Substituindo as horas e a velocidade média na equação horária do espaço fica da seguinte forma:
 		
 		\begin{equation*}
-			s(2,33h) =105 km/h \times 2,33h
+			s(2,33h) =105 km/h \cdot 2,33h
 		\end{equation*}
 		\begin{equation*}
-			s(2,33h) =105 \times 2,33 \times \frac{km}{\cancel{h}} \times \frac{\cancel{h}}{1}
+			s(2,33h) =105 \cdot 2,33 \cdot \frac{km}{\cancel{h}} \cdot \frac{\cancel{h}}{1}
 		\end{equation*}
 		\begin{equation*}
 			s(2,33h) \approx 244,65 km
@@ -103,7 +103,7 @@
 		Sabendo a distância total da viagem, podemos substis o s(t) por 244,65 km e a velocidade do automóvel por 70 km/h. Deixando a equação da seguinte forma:
 		
 		\begin{equation*}
-			244,65 km = 70 km/h\times t 
+			244,65 km = 70 km/h \cdot t 
 		\end{equation*}
 		
 		Isolando o t para achar o tempo.
@@ -112,7 +112,7 @@
 			t = \frac{244,65 km}{70 km/h} 
 		\end{equation*}
 		\begin{equation*}
-			t = \frac{244,65}{70} \times \frac{\cancel{km}}{1} \times \frac{h}{\cancel{km}} 
+			t = \frac{244,65}{70} \cdot \frac{\cancel{km}}{1} \cdot \frac{h}{\cancel{km}} 
 		\end{equation*}
 		\begin{equation*}
 			t = 3,5h 
@@ -292,7 +292,7 @@
 		
 		C)  
 		
-		i) Plotar o gráfico $v \times t$ da função $v(t)=0,100m/s^3 \cdot t+3m/s$.
+		i) Plotar o gráfico $v \cdot t$ da função $v(t)=0,100m/s^3 \cdot t+3m/s$.
 		\begin{center}
 			\begin{tikzpicture}
 				\begin{axis}[
@@ -306,7 +306,7 @@
 			\end{tikzpicture}
 		\end{center}
 		
-		ii) Desenhar o gráfico $a \times t$ $a(t) = 0,200m/s^3 \cdot t$
+		ii) Desenhar o gráfico $a \cdot t$ $a(t) = 0,200m/s^3 \cdot t$
 		\begin{center}
 			\begin{tikzpicture}
 				\begin{axis}[
@@ -861,12 +861,141 @@
 		
 		\textbf{19.} O piloto de um avião deseja voar de leste para oeste. Um vento de 80,0 km/h sopra do norte para o sul. a) Se a velocidade do avião em relação ao ar é igual a 320 km/h qual deve ser a direção escolhida pelo piloto? b) Qual é a velocidade do avião em relação ao solo? Ilustre sua solução com um diagrama vetorial.
 		
-		\textbf{resposta:}
+		\textbf{resposta:}		
+			
+			Para voar do leste para o oeste, precisa das componente resultante da velocidade em relação ao solo deve estar apenas em direção ao oeste.
+			
+			A) Direção que o piloto deve escolher para que o avião voe de leste para oeste, a componente norte-sul da velocidade do avião em relação ao ar deve anular a velocidade do vento do norte para o sul.
+			
+			Os vetores $\vec{v}_\text{vento}$ é um vetor de intesidade 80 km/h apontando para o sul (eixo negativo $y$), o $\vec{v}_\text{avião/ar}$ é um vetor de intesidade 320 km/h com um ângulo 
+			$\theta$ ao norte do oeste.
+			
+			A velocidade do avião em relação ao solo deve ser puramente oeste, ou seja, a componente norte-sul $y$ da velocidade resultante deve ser zero.
+			
+			Portanto, a componente $y$ da velocidade do avião em relação ao ar deve cancelar a componente do vento:
+			
+			\begin{equation*}
+				\sin{\theta} = \frac{80}{320} = \arcsin({\frac{1}{4}})			
+			\end{equation*}
+			\begin{equation*}
+				\sin{\theta} \approx 14,48^\circ
+			\end{equation*}
+			
+			O ângulo $\theta$ encontrado é o ângulo de norte do oeste.
+			
+			B) Agora, calculamos a velocidade resultante do avião em relação ao solo (componente $x$, leste-oeste):
+
+			\begin{equation*}
+				\cos(\theta) = \cos(14,48^\circ)	
+			\end{equation*}
+						
+			Usando a identidade trigonométrica e sabendo que $\cos(14,48^\circ) \approx 0,970$
+			
+			\begin{equation*}
+				\vec{v}_\text{avião/solo} = 320 \cdot \cos(14,48^\circ)	
+			\end{equation*}
+			\begin{equation*}
+				\vec{v}_\text{avião/solo} \approx 320 \cdot 0,970 \approx 310,4 \, \text{km/h}	
+			\end{equation*}
+			
+			
+			Diagrama dos vetores (Coloquei porque eu queria aprender vetor no LaTeX)
+			\begin{center}
+				\begin{tikzpicture}
+					% Vetor de velocidade do avião/ar
+					\draw[->, thick] (0,0) -- (3,1) node[midway, above] {$\vec{v}_\text{avião/ar}$};
+					% Vetor de velocidade do vento
+					\draw[->, thick] (0,0) -- (0,-1) node[midway, left] {$\vec{v}_\text{vento}$};
+					% Vetor resultante do avião/solo
+					\draw[->, thick] (0,0) -- (3,0) node[midway, below] {$\vec{v}_\text{avião/solo}$};
+					% Marca o ângulo theta
+					\draw (0.8,0) arc[start angle=0,end angle=18.43,radius=0.8];
+					\node at (0.9,0.3) {$\theta$};
+				\end{tikzpicture}	
+			\end{center}
 		
 		\vspace{2em}
 		
-		\textbf{20.}  Um professor de física faz loucas proezas em suas horas vagas. Sua última façanha foi saltar sobre um rio com a sua motocicleta. A rampa de decolagem era inclinada de 53,0º, a largura do rio era de 40,0 m, e a outra margem estava a 15,0 m abaixo do nível da rampa. O rio estava a 100 m abaixo do nível da rampa. Despreze a resistência do ar. a) Qual deveria ser sua velocidade para que ele pudesse alcançar a outra margem sem cair no rio? b) Caso sua velocidade fosse igual à metade do valor encontrado em (a), aonde ele cairia?
+		\textbf{20.}  Um professor de física faz loucas proezas em suas horas vagas. Sua última façanha foi saltar sobre um rio com a sua motocicleta. A rampa de decolagem era inclinada de 53,0º, a largura do rio era de 40,0 m, e a outra margem estava a 15,0m abaixo do nível da rampa. O rio estava a 100 m abaixo do nível da rampa. Despreze a resistência do ar. a) Qual deveria ser sua velocidade para que ele pudesse alcançar a outra margem sem cair no rio? b) Caso sua velocidade fosse igual à metade do valor encontrado em (a), aonde ele cairia?
 		
 		\textbf{resposta:}
+	
+		Equações de movimento para o salto:
+		\begin{equation*}
+			y(t) = v_0 \sin(\theta) t - \frac{1}{2}gt^2
+		\end{equation*}
+		\begin{equation*}
+			x(t) = v_0 \cos(\theta) t
+		\end{equation*}
+		
+		Alcançar a outra margem significa que $y(t) = -h$ quando $x(t) = D$.
+		
+		Substituindo $t = \frac{D}{v_0 \cos(\theta)}$ na equação para $y(t)$ para achar a equação da trajetória
+		
+		\begin{equation*}
+			-h = v_0 \sin(\theta) \frac{D}{v_0 \cos(\theta)} - \frac{g}{2} \left(\frac{D}{v_0 \cos(\theta)}\right)^2
+		\end{equation*}
+		
+		Como $\frac{\sin(\theta)}{\cos(\theta)} = \tan(\theta)$, vamos simplificar essa parte na equação
+		
+		\begin{equation*}
+			-h = D \tan(\theta) - \frac{gD^2}{2v_0^2 \cos^2(\theta)}
+		\end{equation*}
+		
+		Além disso, vamos isolar o $v_0$ na equação da trajetória
+		
+		\begin{equation*}
+			v_0^2 = \frac{gD^2}{2\cos^2(\theta)(D \tan(\theta) + h)}
+		\end{equation*}
+		
+		Substituindo os valores que a questão nos fornece e resolvendo a igualdade, a equação deve ficar da seguinte forma
+		
+		\begin{equation*}
+			v_0^2 = \frac{9,8 \cdot 40,0^2}{2 \cdot \cos^2(53,0^\circ) \cdot (40,0 \tan(53,0^\circ) + 15,0)}
+		\end{equation*}
+		
+		\begin{equation*}
+			v_0 \approx 21,8 \, \text{m/s}
+		\end{equation*}	
+		
+		B) Queda com Metade da Velocidade, ou seja, com a velocidade $v_0 = 10,9 \text{m/s}$
+		
+		\begin{equation*}
+			x(t) = 10,9 \cos(53,0^\circ) t
+		\end{equation*}
+		
+		\begin{equation*}
+			y(t) = 10,9 \sin(53,0^\circ) t - \frac{1}{2} \cdot 9,8 \cdot t^2
+		\end{equation*}
+		
+		Resolvendo para quando $y(t) = -100$ que é a altura do rio
+		
+		\begin{equation*}
+			-100 = 10,9 \sin(53,0^\circ) t - 4,9t^2
+		\end{equation*}
+		
+		\begin{equation*}
+			-100 = 8,7t - 4,9t^2
+		\end{equation*}
+		
+		Somando +100 na desigualdade, nota-se que forma uma função quadrática. Para resolver a função quadrática se utiliza bhaskara. Como esta em função de t a equação fica
+		
+		\begin{equation*}
+			t = \frac{-8,7 \pm \sqrt{8,7^2 - 4 \cdot (-100) \cdot (-4,9)}}{2 \cdot -4,9}
+		\end{equation*}
+		\begin{equation*}
+			t \approx 4,7s	
+		\end{equation*}
+		
+		Com o valor do tempo, podemos substituir na equação $x(t)$
+		
+		\begin{equation*}
+			x(t) = 10,9 \cos(53,0^\circ) \cdot4,7
+		\end{equation*}
+		
+		\begin{equation*}
+			x(t) \approx 31,0m	
+		\end{equation*}
+		
 	\end{flushleft}
 \end{document}
