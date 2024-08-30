@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.26)  27 AUG 2024 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.26)  29 AUG 2024 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -479,10 +479,6 @@ File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/tkz-fct/tkz-fct.sty
-2022/01/27 1.6c function tkz-fct
-Package: tkz-fct 2022/01/27 1.6c function 
-\tkz@tkzf@fct=\count316
 (/usr/share/texlive/texmf-dist/tex/latex/tkz-base/tkz-base.sty
 2022/01/25 4.01 tkz-base.sty
 Package: tkz-base 2022/01/25 4.01 tkz-base
@@ -521,7 +517,7 @@ e.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen264
 \pgfdecoratedinputsegmentremainingdistance=\dimen265
 \pgf@decorate@distancetomove=\dimen266
-\pgf@decorate@repeatstate=\count317
+\pgf@decorate@repeatstate=\count316
 \pgfdecorationsegmentamplitude=\dimen267
 \pgfdecorationsegmentlength=\dimen268
 )
@@ -557,7 +553,7 @@ zlibraryintersections.code.tex
 s.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 )
-\pgf@intersect@solutions=\count318
+\pgf@intersect@solutions=\count317
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -620,10 +616,10 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \backup@length=\skip54
 \ar@cellbox=\box68
 )
-\c@nprt@mantissa@digitsbefore=\count319
-\c@nprt@mantissa@digitsafter=\count320
-\c@nprt@exponent@digitsbefore=\count321
-\c@nprt@exponent@digitsafter=\count322
+\c@nprt@mantissa@digitsbefore=\count318
+\c@nprt@mantissa@digitsafter=\count319
+\c@nprt@exponent@digitsbefore=\count320
+\c@nprt@exponent@digitsafter=\count321
 \nprt@digitwidth=\skip55
 \nprt@sepwidth=\skip56
 \nprt@decimalwidth=\skip57
@@ -631,12 +627,12 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \nprt@digittoks=\toks37
 \nprt@pretoks=\toks38
 \nprt@posttoks=\toks39
-\nprt@thisdigit=\count323
-\nprt@curpos=\count324
-\nprt@rndpos=\count325
-\c@nprt@digitsfirstblock=\count326
-\c@nprt@blockcnt=\count327
-\c@nprt@cntprint=\count328
+\nprt@thisdigit=\count322
+\nprt@curpos=\count323
+\nprt@rndpos=\count324
+\c@nprt@digitsfirstblock=\count325
+\c@nprt@blockcnt=\count326
+\c@nprt@cntprint=\count327
 
 No configuration file `numprint.cfg' found.)
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfp/xfp.sty
@@ -648,19 +644,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count329
+\actioncount=\count328
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count330
-\FP@xia=\count331
-\FP@xib=\count332
-\FP@xfa=\count333
-\FP@xfb=\count334
-\FP@rega=\count335
-\FP@regb=\count336
-\FP@regs=\count337
-\FP@times=\count338
+\FP@xs=\count329
+\FP@xia=\count330
+\FP@xib=\count331
+\FP@xfa=\count332
+\FP@xfb=\count333
+\FP@rega=\count334
+\FP@regb=\count335
+\FP@regs=\count336
+\FP@times=\count337
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -679,7 +675,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count339
+\FPseed=\count338
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -706,7 +702,7 @@ Package: fp-eval 1995/04/03
 \tkz@tcy=\dimen284
 \tkz@tdx=\dimen285
 \tkz@tdy=\dimen286
-\tkz@cntmk=\count340
+\tkz@cntmk=\count339
 
 Local configuration file tkz-base.cfg found and used
 (/usr/share/texlive/texmf-dist/tex/latex/tkz-base/tkz-base.cfg
@@ -744,9 +740,13 @@ File: tkz-tool-arith.tex tkz-tool-arith 3.02 c
 2022/01/25 4.01 tkz-obj-eu-points.tex
 ) (/usr/share/texlive/texmf-dist/tex/latex/tkz-base/tkz-obj-rep.tex
 2022/01/25 4.01 tkz-obj-rep.tex
-)) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ( FP-SUB )
-) ) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ( FP-SUB ) ) ) ( FP-EVAL
-( FP-UPN ) )) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/tkz-fct/tkz-fct.sty
+2022/01/27 1.6c function tkz-fct
+Package: tkz-fct 2022/01/27 1.6c function 
+\tkz@tkzf@fct=\count340
+( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ( FP-SUB ) )
+) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ( FP-SUB ) ) ) ( FP-EVAL ( FP-UPN
+) )) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 
@@ -824,6 +824,12 @@ ntourlua.code.tex)
 \pgfplots@zmin@reg=\dimen292
 \pgfplots@zmax@reg=\dimen293
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+))
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -848,20 +854,20 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -889,7 +895,7 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 28.
+ on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -927,309 +933,35 @@ your preamble.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] ( FP-EVAL
-( FP-UPN ) ) ( FP-EVAL ( FP-UPN ) ) ( FP-DIV ) ( FP-DIV )
-\openout3 = `main.tkzfonct.gnuplot'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+[7] [8] [9] [10] [11] [12] [13] [14] [15] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 30300 strings out of 478287
+ 764615 string characters out of 5849289
+ 1296931 words of memory out of 5000000
+ 47914 multiletter control sequences out of 15000+600000
+ 475944 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,13n,97p,700b,2081s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts
+/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/latxfont/line10.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfrm1200.pfb>
+Output written on main.pdf (15 pages, 185920 bytes).
+PDF statistics:
+ 151 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-runsystem(gnuplot main.tkzfonct.gnuplot)...disabled (restricted).
-
-
-
-Package pgf Warning: Plot data file `main.tkzfonct.table' not found. on input l
-ine 293.
-
-Runaway argument?
- xmin=0, xmax=3, xstep=0.5, ymin=0, ymax=3, ystep=0.5, xlabel={\textit \ETC.
-! Paragraph ended before \pgfplots@@environment@axis was complete.
-<to be read again> 
-                   \par 
-l.301 					
-           
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no ] in font nullfont!
-! Undefined control sequence.
-l.304 					\addplot
-                   [blue, thick,domain=0:3] {3+0.1*x^2};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no : in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no + in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no * in font nullfont!
-Missing character: There is no x in font nullfont!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.304 ...addplot[blue, thick,domain=0:3] {3+0.1*x^
-                                                  2};
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-l.304 ...dplot[blue, thick,domain=0:3] {3+0.1*x^2}
-                                                  ;
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Undefined control sequence.
-\endpgfplots@environment@opt ...ctiveplothandlers 
-                                                  \pgfplots@set@options@afte...
-l.305 				\end{axis}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@x 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@x 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@y 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@y 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@x 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@y 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \pgfplots@@min 
-l.305 				\end{axis}
-                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \pgfplots@@min 
-l.305 				\end{axis}
-                    
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \pgfplots@@max 
-l.305 				\end{axis}
-                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \pgfplots@@max 
-l.305 				\end{axis}
-                    
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@x 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \pgfcrdmth@x 
-l.305 				\end{axis}
-                    
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\pgfplotscoordmath ...@#1\endcsname @#2\endcsname 
-                                                  
-l.305 				\end{axis}
-                    
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [\pgfplots@ymax :\pgfplots@ymax ]) on input line 305.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-! Missing number, treated as zero.
-<to be read again> 
-                   \pgfplots@@min 
-l.305 				\end{axis}
-                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \pgfplots@@min 
-l.305 				\end{axis}
-                    
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \pgfplots@@max 
-l.305 				\end{axis}
-                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \pgfplots@@max 
-l.305 				\end{axis}
-                    
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully fro

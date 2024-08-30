@@ -8,13 +8,24 @@
 \usepackage{amsmath} % For align environment
 \usepackage{cancel}
 \usepackage{blindtext}
-
-%Desenhar gráfico
-\usepackage{tikz}
-\usepackage{tkz-fct}
-
+\usepackage{tikz, tkz-base, tkz-fct}
 \usepackage{pgfplots}
 
+\usepackage{physics}
+\usetikzlibrary{angles,quotes} % for pic
+\contourlength{1.2pt}
+
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{veccol}{green!70!black}
+\colorlet{vcol}{green!70!black}
+\colorlet{xcol}{blue!85!black}
+\colorlet{projcol}{xcol!60}
+\colorlet{unitcol}{xcol!60!black!85}
+\colorlet{myblue}{blue!70!black}
+\colorlet{myred}{red!90!black}
+\colorlet{mypurple}{blue!50!red!80!black!80}
+\tikzstyle{vector}=[->,very thick,xcol]
 
 % Estou colocando 2 de espaço por cada pergunta
 
@@ -176,7 +187,7 @@
 		
 		A) Para calcular a velocidade média precisa da seguinte equação
 		
-		\begin{equation*}\label{exercicio3eq1}
+		\begin{equation*}
 			v_m = \frac{\Delta{x}}{\Delta{t}} = \frac{x_f - x_i}{t_f - t_i}
 		\end{equation*}
 		
@@ -200,7 +211,7 @@
 		
 		Derivando vamos obter a equação da seguinte forma:
 		
-		\begin{equation*}
+		\begin{equation*}=
 			\vec{v}(t) = 4,80 \cdot m/s^2 \cdot t - 0,36 \cdot m/s^3 \cdot t^2
 		\end{equation*}
 		
@@ -217,7 +228,7 @@
 		
 		iii) Verificando quando o $t=10,0s$
 		
-		\begin{equation*}
+		\begin{equation*}=
 			\vec{v}(10,0s) = 4,80 \cdot m/s^2 \cdot 10,0s - 0,36 \cdot m/s^3 \cdot (10,0s)^2
 		\end{equation*}
 		\begin{equation*}
@@ -280,31 +291,582 @@
 		\end{equation*}
 		
 		C)  
-		i) Desenhar o gráfico $v \times t$:
+		
+		i) Plotar o gráfico $v \times t$ da função $v(t)=0,100m/s^3 \cdot t+3m/s$.
 		\begin{center}
 			\begin{tikzpicture}
-				\tkzInit[xmin=0,xmax=3, xstep=0.5, ymin=0, ymax=3, ystep=0.5]
-				\tkzAxeXY
-				\tkzGrid(0,0)(3,3)
-				
-				\tkzDrawY[label={\textit{t}}]
-				\tkzDrawX[label={\textit{v}}]
-				
-				\tkzFct[domain=0:3] {x} % Função que deseja plotar
-			\end{tikzpicture}  
-		
-			\begin{tikzpicture}
 				\begin{axis}[
-					xmin=0, xmax=3, xstep=0.5, ymin=0, ymax=3, ystep=0.5,
-					xlabel={\textit{v}}, 
-					ylabel={\textit{t}},
-					
-					grid=both,
+					domain=0:5, % Define o domínio da função
+					xmin=0, xmax=5, ymin=0, ymax=5, % Limites dos eixos
+					xlabel={\textit{t}}, ylabel={\textit{v(t)}}, % Rótulos dos eixos
+					grid=both, % Adiciona uma grade
 					]
-					\addplot[blue, thick,domain=0:3] {3+0.1*x^2};
+					\addplot[blue, thick] {3+0.1*x^2}; % Plota a função
 				\end{axis}
-			\end{tikzpicture}  
+			\end{tikzpicture}
 		\end{center}
 		
+		ii) Desenhar o gráfico $a \times t$ $a(t) = 0,200m/s^3 \cdot t$
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					domain=0:5, % Define o domínio da função
+					xmin=0, xmax=5, ymin=0, ymax=2, % Limites dos eixos
+					xlabel={\textit{t}}, ylabel={\textit{a(t)}}, % Rótulos dos eixos
+					grid=both, % Adiciona uma grade
+					]
+					\addplot[red, thick] {0.2*x}; % Plota a função
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		
+		\vspace{2em}
+		
+		\textbf{5.} O corpo humano pode sobreviver a um trauma por acidente com aceleração negativa (parada súbita) quando o módulo de aceleração é menor que 250 m/s². Suponha que você sofra um acidente de automóvel com velocidade inicial de 105 km/h e seja amortecido por um air bag que infla automaticamente. Qual deve ser a distância que o air bag se deforma para que você consiga sobreviver?
+		
+		\textbf{resposta:}
+		
+		Como não possuimos o tempo, para resolver vamos utilizar a equação de Torricelli.
+		
+		\begin{equation*}
+			v^2 = v_0^2+2 \cdot a \cdot \Delta{s}
+		\end{equation*}
+		
+		Para descorbri a distância, precisamos isolar ela na equação, ficando da seguinte forma:
+		
+		\begin{equation*}
+			\Delta{s} = \frac{v^2 - v_0^2}{2 \cdot a}
+		\end{equation*}
+		
+		A velocidade final será igual a zero, pois queremos quando estiver em repouso ou "batido".
+		
+		\begin{equation*}
+			\Delta{s} = \frac{0^2 - (30m/s)^2}{-2 \cdot 250m/s^2}
+		\end{equation*}
+		\begin{equation*}
+			\Delta{s} = \frac{900m^2/s^2}{500m/s^2}
+		\end{equation*}
+		\begin{equation*}
+			\Delta{s} = \frac{900}{500} \cdot \frac{m^{\cancel{2}}}{\cancel{s^2}} \cdot \frac{\cancel{s^2}}{\cancel{m}}
+		\end{equation*}
+		\begin{equation*}
+			\Delta{s} = 1,8 m
+		\end{equation*}
+		
+		Para uma distância segura, o \textit{air bag} deve ser acionado ao uma distância de 1,8m antes da batida.
+		
+		\vspace{2em}
+		
+		\textbf{6.} Um trem de metrô parte do repouso em uma estação e acelera com uma taxa constante de 1,60 m/s² durante 14,0 s. Ele viaja com velocidade constante durante 70,0 s e reduz a velocidade com uma taxa constante de 3,50 m/s² até parar na estação seguinte. Calcule a distância total percorrida.
+		
+		\textbf{resposta:}
+		
+		i) Primeiro precisamos achar a distância percorrida durante a aceleração, que o trem partiu do repouso e teve uma aceleração de $1,60m/s^2$ por 14,0 segundos. O deslocamento pode ser tratado como um movimento retilíneo uniforme, e com isso podemos utilizar a equação horária do espaço, que descrevemos da seguinte forma:
+		
+		\begin{equation*}
+			s_a(t) = s_0 + v_0 \cdot t + \frac{1}{2} \cdot a \cdot t^2
+		\end{equation*}
+		
+		Onde $s_0 = 0m$, $v_0 = 0m/s$, $a = 1,6m/s^2$ e $s_a(t)$ é a posição do trem durante a acelração.
+		
+		\begin{equation*}
+			s_a(t) = \cancel{s_0} + \cancel{v_0} \cdot t + \frac{1}{2} \cdot a \cdot t^2
+		\end{equation*}
+		\begin{equation*}
+			s_a(t) =\frac{1}{2} \cdot a \cdot t^2
+		\end{equation*}
+		
+		Agora podemos verificar a distância percorrida pelo trem até os 17 segundos.
+		
+		\begin{equation*}
+			s_a(17,0s) =\frac{1}{2} \cdot a \cdot (17,0s)^2
+		\end{equation*}
+		\begin{equation*}
+			s_a(17,0s) \approx 156,8m
+		\end{equation*}
+		
+		ii) Precisamos achar a velocidade que ele atingio até os 17,0 segundos para saber a velocidade que ele manteve constante por mais 70 segundos. Para isso vamos utlizar a equação de Torricelli e isolar a velocidade final.
+		
+		\begin{equation*}
+			v^2 = v_0^2 + 2 \cdot a \cdot \Delta{s}
+		\end{equation*}
+		
+		Onde $v_0=0$, $a=1,60m/s^2$ e o $\Delta{s} = 156,8m$. Substituindo na equação e tirando a raiz fica da segunte forma:
+		
+		\begin{equation*}
+			v^2 = \cancel{v_0}^2 + 2 \cdot 1,60m/s^2 \cdot 156,8m
+		\end{equation*}
+		\begin{equation*}
+			v^2 = 501,76m^2/s^2 = \sqrt{501,76m^2/s^2}
+		\end{equation*}
+		\begin{equation*}
+			v_c \approx 22,39m/s  
+		\end{equation*}
+		
+		Descobrindo a velocidade que ele obtem quando chega em 17,0 segundos, essa velocidade é a velocidade constante que ele irá se manter por mais 70,0 segundos. Podemos utilizara equação horária do espaço, considerado novamente que ele irá começar na distância zero.
+		
+		\begin{equation*}
+			s_c(t)=\cancel{s_0}+v_c \cdot t
+		\end{equation*}
+		
+		Onde $v_c = 22,39m/s$ e precisamos ver sua posição no tempo igual a 70,0 segundos.
+		
+		\begin{equation*}
+			s_c(70,0s)=22,39\frac{m}{\cancel{s}} \cdot 70,0\cancel{s} = 1.724,1m
+		\end{equation*}
+		
+		iii) Agora precisamos entrar a distância que ele percorreu ao começar a desaceleração e entrar em repouso. Também será utilizado a equação de Torricelli para resolver. Onde $v_0=22,39m/s$, $v^2=0m/s$, $a=-3,50m/s^2$ e o $\Delta{s}_r$ é a constante que iremos isolar e tentar descobrir.
+		
+		\begin{equation*}
+			0^2=(22,39m/s)^2 - 2 \cdot -3,50m/s^2 \cdot \Delta{s} _r
+		\end{equation*}
+		
+		Isolando o $\Delta{s} _r$ na equação
+		
+		\begin{equation*}
+			\Delta{s} _r = \frac{-(22,39m/s)^2}{-2 \cdot 3,50 m/s^2} = 72,90m
+		\end{equation*}
+		
+		Para descobrir a distância total percorrida, precisamo somar a distância de aceleração mais a distância que ele se manteve constante mais a distância em que ele desacelerou. Descrevemos a equação da seguinte forma
+		
+		\begin{equation*}
+			\Delta{s}_t = s_a + s_c + \Delta{s}
+		\end{equation*}        
+		
+		Onde $s_a = 156,8m$, $s_c=1.724,1m$ e $\Delta{s} _r = 72,90m$.
+		
+		\begin{equation*}
+			\Delta{s}_t = 156,8m + 1.724,1m + 72,90m = 1.797,00m
+		\end{equation*}
+		
+		A distância total percorrida pelo trem foi de 1.797,00m.
+		
+		\vspace{2em}
+		
+		\textbf{8.} Um ovo é atirado verticalmente de baixo para cima de um ponto máximo da cornija na extremidade superior de um edifício alto. Ele passa rente a cornija em seu movimento para baixo, atingindo um ponto a 50,0m abaixo da cornija 5,0s após deixar a mão do lançador. Despreze a esistência do ar. a) Calcule a velocidade inicial do ovo. b) Qual a altura máxima atingida acima do ponto inicial do lançamento? c) Qual o módulo da velocidade nessa altura máxima? d) Qual é o módulo e o sentido da aceleração nessa altura máxima? Faça gráficos a x t, v x t e y x t para o movimento do ovo.
+		
+		\textbf{resposta:}
+		
+		\textbf{9.} A aceleração de uma motocicleta é dada por $a_x(t) = At - Bt^2$ onde $A = 1,5m/s^3$ e $B = 0,120 m/s^4$. A motocicleta está em repouso na origem no instante $t = 0$. a) Calcule sua velocidade e posição em função do tempo. b) Calcule a velocidade máxima que ela pode atingir.
+		
+		\textbf{resposta:}
+		
+		Para descobrir a velocidade e a posição precisamos intergrar a aceleração.
+		
+		Para descorbri a velocidade precisamos resolver a igualdade abaixo
+		\begin{equation*}
+			v_x(t) = \int_{t_0}^{t_1} a_x(t)dt
+		\end{equation*}
+		
+		Igualdade resolvida:
+		
+		\begin{equation*}
+			v_x(t) = \frac{A \cdot t^2}{2} - \frac{B \cdot t^3}{3}
+		\end{equation*}
+		
+		Para descobrir a função do espaço precisamos intergrar a velocidade.
+		
+		\begin{equation*}
+			s_x(t) = \int_{t_0}^{t_1} v_x(t)dt
+		\end{equation*}
+		
+		Igualdade resolvida:
+		
+		\begin{equation*}
+			s_x(t) = \frac{A \cdot t^3}{6} - \frac{B \cdot t^4}{12}
+		\end{equation*}
+		
+		A) Para calcular a velocidade e a posição em relação ao tempo precisamos desenhar o gráfico para um melhor entendimento de como foi o movimento dele.
+		
+		i)O gráfico da equação $v_x(t) = \frac{A \cdot t^2}{2} - \frac{B \cdot t^3}{3}$ da velocidade em função do tempo.
+		
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					domain=0:20, % Define o domínio da função
+					xmin=0, xmax=20, ymin=0, ymax=40, % Limites dos eixos
+					xlabel={\textit{t}}, ylabel={\textit{v(t)}}, % Rótulos dos eixos
+					grid=both, % Adiciona uma grade
+					]
+					\addplot[red, thick] {((4.5*x^2)-(0.24*x^3))/6}; % Plota a função
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		
+		ii) O gráfico da equação $s_x(t) = \frac{A \cdot t^3}{6} - \frac{B \cdot t^4}{12}$ do espaço em função do tempo da equação .
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					domain=0:20, % Define o domínio da função
+					xmin=0, xmax=15, ymin=0, ymax=30, % Limites dos eixos
+					xlabel={\textit{t}}, ylabel={\textit{s(t)}}, % Rótulos dos eixos
+					grid=both, % Adiciona uma grade
+					]
+					\addplot[blue, thick] {((3*x^3)-(0.24*x^4))/24}; % Plota a função
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		
+		\vspace{2em}
+		
+		\textbf{10.} Você está no telhado de um prédio da UFMT 46 m acima do solo. Seu professor, que possui 1,80 m de altura, está caminhando próximo do edifício com um velocidade constante de 1,20 m/s. Se você desejar jogar um ovo na cabeça dele, em que ponto ele deve estar quando você largar o ovo? Suponha que o ovo esteja em queda livre e que o professor caminhe em linha reta em direção a porta do edifício
+		
+		\textbf{resposta:}
+		
+		A altura total é da ponta da da cabeça do professor até a ponta do edifício. O $\Delta{s}$ total é 46 metros, como a altura do professor é 1,8m, a altura de queda será a altura total menos a altura do professor.
+		
+		\begin{equation*}
+			h_q = \Delta{s} - 1,8 = 44,2m
+		\end{equation*}
+		
+		Primeiro precisamos saber o tempo de queda livre do ovo. Para isso utilizamos a seguinte fórmula:
+		
+		\begin{equation*}
+			x_q(t) = x_0 + v_0 \cdot t + \frac{a_y \cdot t^2}{2}
+		\end{equation*}
+		
+		Onde $x_q(t) = h_q = 44,2m$, $x_0 = 0$, $v_0 = 0$, $a_y = g = 9,81 m/s^2$ e $t = t_q$ que significa tempo de queda. Substituindo esses valores na fórmula e resolvendo conseguimos o seguinte resultado
+		
+		\begin{equation*}
+			44,2m = \cancel{x_0} + \cancel{v_0 \cdot t_q} + \frac{9,81 \cdot t_q^2}{2}
+		\end{equation*}
+		
+		\begin{equation*}
+			t_q \approx 3,0s
+		\end{equation*}
+		
+		Agora precisamos descobrir a distância que o professor percorre durante 3,0 segundos. Como se trata de um movimento retilíneo e uniforme, podemos utilizar a seguinte fórmula
+		
+		\begin{equation*}
+			x(t) = x_0 + v \cdot t
+		\end{equation*}
+		
+		Onde $x(t) = x_p$, $x_0 = 0$, $v = 1,2m/s$ e $t = t_q = 3,0s$. substituindo os valores na fórmula podemos resolver e descobrir a distância percorrida pelo professor durante o tempo de queda
+		
+		\begin{equation*}
+			x_p = \cancel{x_0} + 1,2m/\cancel{s} \cdot 3,0\cancel{s} 
+		\end{equation*}
+		\begin{equation*}
+			x_p = 3,60m 
+		\end{equation*}
+		
+		Então o ovo deve ser solto quando o professor estiver 3,6 metros de distância.
+		
+		\vspace{2em}
+		
+		\textbf{11.} Se $\vec{r} = bt^2 \hat{i} + c t^3 \hat{j}$, onde b e c são constantes positivas, quando o vetor velocidade faz um ângulo de $45,0^\circ$ com os eixos Ox e Oy?
+		
+		\textbf{resposta:}
+		
+		Para achar o vetor de velocidade precisamos derivar o vetor de posição em relação ao tempo.
+		
+		\begin{equation*}
+			\vec{v} = \dfrac{d\vec{r}}{dt} = \dfrac{bt^2\hat{i} + ct^3\hat{j}}{dt}
+		\end{equation*}
+		\begin{equation*}
+			\vec{v} = 2bt\hat{i} + 3ct^2\hat{j}
+		\end{equation*}
+		
+		Para ter um ângulo de 45 graus, o triângulo retângulo precisa ser necessáriamente isósceles e a hipotenusa diferente. Então sabemos que os vetores de velocidade de $v_x\hat{i} = v_y\hat{j}$.
+		
+		\begin{equation*}
+			2b\cancel{t} = 3ct^{\cancel{2}}
+		\end{equation*}
+		\begin{equation*}
+			t = \frac{2b}{3c}
+		\end{equation*}
+		
+		\vspace{2em}
+		
+		\textbf{12.} Um avião a jato está voando a uma altura constante. No instante $t_1 =0$, os componentes da velocidade são $v_x = 90m/s$, $v_y = 110 m/s$. No instante $t_2 = 30,0s$ os componentes são $v_x = -170 m/s$, $v_y = 40 m/s$. a) Faça um esboço do vetor velocidade para $t_1$ e para $t_2$. Qual a diferença entre esses dois vetores? Para este intervalo de tempo, calcule b) os componentes da aceleração média, c) o módulo, a direção e o sentido da aceleração média.
+		
+		\textbf{resposta:}
+		
+		A) Esboço dos vetores de $t_1$ e $t_2$
+		
+		\begin{center}
+			\begin{tikzpicture}
+				% Eixos
+				\draw[->] (0,0) -- (5,0) node[right] {$v_x$};
+				\draw[->] (0,0) -- (0,5) node[above] {$v_y$};
+				
+				% Vetor v1
+				\draw[->, blue, thick] (0,0) -- (3,4.4) node[right] {$\mathbf{v_1}$};
+				
+				% Vetor v1_y
+				\draw[->, blue, thick] (0,0) -- (0,4.4) node[left] {$\mathbf{v_{x1}}$};
+				
+				\draw[-, black, dashed] (3,4.4) -- (0,4.4);
+				
+				% Vetor v1_x
+				\draw[->, blue, thick] (0,0) -- (3,0) node[above] {$\mathbf{v_{x1}}$};
+				
+				\draw[-, black, dashed] (3,0) -- (3,4.4);
+				
+				% Vetor v2
+				\draw[->, red, thick] (0,0) -- (-3.8,1.5) node[below left] {$\mathbf{v_2}$};
+				
+				% Vetor v2_y
+				\draw[->, red, thick] (0,0) -- (-3.8,0) node[left] {$\mathbf{v_{x2}}$};
+				
+				\draw[-, black, dashed] (-3.8,0) -- (-3.8,1.5);
+				
+				% Vetor v2_x
+				\draw[->, red, thick] (0,0) -- (0,1.5) node[right] {$\mathbf{v_{x2}}$};
+				
+				\draw[-, black, dashed] (-3.8,1.5) -- (0,1.5);
+				
+				% Marcação dos vetores
+				\draw[dashed] (0,0) -- (3,0);
+				\draw[dashed] (0,0) -- (0,4.4);
+				\draw[dashed] (0,0) -- (-3.8,0);
+				\draw[dashed] (0,0) -- (0,1.5);
+			\end{tikzpicture}
+		\end{center}
+		Para encontrar a difereça precisa fazer a velocidade inal menos o velocidade inicial da seguinte forma
+		
+		\begin{equation*}
+			\Delta{v_x} = v_{2x} - v_{1x} = -170m/s - 90m/s = -260m/s
+		\end{equation*}
+		\begin{equation*}
+			\Delta{v_y} = v_{2y} - v_{1y} = 40m/s - 110m/s = -70m/s
+		\end{equation*}
+		
+		Então
+		
+		\begin{equation*}
+			\Delta{v} = (-260m/s , -70m/s)
+		\end{equation*}
+		
+		B) Para achar a velocidade média precisamos utilizar a seguinte fórmula:
+		
+		\begin{equation*}
+			a_m = \frac{\vec{v_2} - \vec{v_1}}{t_2 - t_1}
+		\end{equation*}
+		
+		Aceleração média no eixo x:
+		\begin{equation*}
+			a_{mx} = \frac{-170 m/s - 90 m/s}{30,0 s - 0s} = \frac{-260m/s}{30s}
+		\end{equation*}
+		\begin{equation*}
+			a_{mx} \approx - 8,67 m/s^2
+		\end{equation*}
+		
+		Aceleração média no eixo y:
+		\begin{equation*}
+			a_{my} = \frac{40m/s - 110m/s}{30,0 s - 0s} = \frac{-70m/s}{30s}
+		\end{equation*}
+		\begin{equation*}
+			a_{my} \approx - 2,33 m/s^2
+		\end{equation*}
+		
+		C) Para calcular o módulo de um vetor precisamos utilizar a fórmula de pitágoras
+		
+		\begin{equation*}
+			|a_m| = \sqrt{(a_{mx})^2 + (a_{my})^2} = \sqrt{(-8,67)^2 + (-2,33)^2} \approx 8,92 m/s
+		\end{equation*}
+		
+		Agora precisamos achar o ângulo. Para isso é necessário usar regras dos ângulos.
+		
+		\begin{equation*}
+			\angle^{\circ} = \arctan(\frac{a_{my}}{a_{mx}}) = \arctan (\frac{-2,33}{-8,67}) = \arctan (0,27) \approx 15,11^{\circ}  
+		\end{equation*}
+		
+		O módulo da aceleração média é aproximadamente $8,92 m/s^2$ e a angulação é aproximadamente $15,11^{\circ}$.
+		
+		\vspace{2em}
+		
+		\textbf{13.} Dois grilos, Chirpy e Milada, saltam do topo de um rochedo íngreme. Chirpy simplesmente se deixa cair e chega ao solo em 3,50 s, enquanto Milada salta horizontalmente com velocidade inicial de 95,0 cm/s. A que distância da base do rochedo Milada vai atingir o chão?
+		
+		\textbf{resposta:}
+		
+		\vspace{2em}
+		
+		\textbf{14.} Uma bola de gude rola horizontalmente com velocidade escalar $v_0$ e cai do topo de uma plataforma de 2,75m de altura, sem sofrer nenhuma resistência significativa do ar. No nível do solo, a 2,0m da base da plataforma, há um buraco escancarado de diâmetro de 1,50m. Para qual alcance da velocidade de $v_0$ a bola de gude aterrissará no buraco?
+		
+		\textbf{resposta:}
+		
+		Primeiro precisamos calcular  o tempo de queda da bola. Para isso será necessário utilizar a seguinte fórmula
+		
+		\begin{equation*}
+			y(t) = y_0 + v_{y0} \cdot t + \frac{a_y \cdot t^2}{2}
+		\end{equation*}
+		
+		Onde $y(t) = 0$, $y_0 = 2,75m$, $v_{y0} = 0$, $a_y = -g = 9,81 m/s^2$. Substituindo esses valores na equação vamos conseguir calcular o tempo de queda da bolinha
+		
+		\begin{equation*}
+			0 = 2,75m + \cancel{v_{y0} \cdot t} - \frac{g \cdot t^2}{2}
+		\end{equation*}
+		\begin{equation*}
+			t = \sqrt{\frac{2 \cdot 2,75 m}{9,81 m/s^2}} \approx 0,56s
+		\end{equation*}
+		
+		Achando o tempo de queda, podemos utilizar a seguinte equação e isolar a velocidade e substituir o t por 0,56.
+		
+		\begin{equation*}
+			x(t) = x_0 + v_{x0} \cdot t
+		\end{equation*}
+		
+		Onde $x(t) = 3,0m$ pois a bolinha pode cair uma distância menor que 3,5m e maior que 2,0m, $x_0=0$ e $t=3,0s$ 
+		
+		\begin{equation*}
+			3,0m = \cancel{x_0} + v_{x0} \cdot 0,56s
+		\end{equation*}
+		\begin{equation*}
+			v_{x0} = \frac{3,0m}{0,56s} \approx 5,35 m/s
+		\end{equation*}
+		
+		\vspace{2em}
+		
+		\textbf{15.} Um avião voa a uma velocidade de 90,0 m/s a um ângulo de 23,0º acima da horizontal. Quando está a 114 m diretamente sobre um cachorro parado no nível do solo, uma mala cai do compartimento de bagagens. A que distância do cachorro a mala vai cair? Despreze a resistência do ar.
+		
+		\textbf{resposta:}
+		
+		Primeiro precisamos calcular  o tempo de queda da mala. Para isso será necessário utilizar a seguinte fórmula
+		
+		\begin{equation*}
+			y(t) = y_0 + v_{y0} \cdot t + \frac{a_y \cdot t^2}{2}
+		\end{equation*}
+		
+		Onde $y(t) = 0$, $y_0 = 114m$, $v_{y0} = 0$, $a_y = -g = 9,81 m/s^2$. Substituindo esses valores na equação vamos conseguir calcular o tempo de queda da bolinha
+		
+		\begin{equation*}
+			0 = 114m + \cancel{v_{y0} \cdot t} - \frac{9,81m/s^2 \cdot t^2}{2}
+		\end{equation*}
+		\begin{equation*}
+			t = \sqrt{\frac{2 \cdot 144m}{9,81 m/s^2}} \approx 5,41s
+		\end{equation*}
+		
+		Achando o tempo de queda, podemos utilizar a seguinte equação e isolar a velocidade e substituir o t por 5,41s.
+		
+		\begin{equation*}
+			x(t) = x_0 + v_{x0} \cdot t
+		\end{equation*}
+		
+		Onde $x(t) = x$, $x_0=0$ $90,0m/s$ e $t=5,41s$ 
+		
+		\begin{equation*}
+			x = \cancel{x_0} + 90,0m/\cancel{s} \cdot 5,41\cancel{s}
+		\end{equation*}
+		\begin{equation*}
+			x \approx 486,9 m
+		\end{equation*}
+		
+		A distância que a caixa irá cair do cachorro é de 486,9 metros.
+		
+		\vspace{2em}
+		
+		\textbf{16.} Em um teste de um ‘aparelho para g’, um voluntário gira em um círculo horizontal de raio igual a 7,0 m. Qual é operíodo da rotação para que a aceleração centrípeta possua módulo de a) 3,0g? b) 10g?
+		
+		\textbf{resposta:}
+		
+		Para resolver esse problema, precisamos usar a fórmula da aceleração centrípeta e a relação entre a aceleração centrípeta e o período de rotação.
+		
+		\begin{equation*}
+			a_c = \frac{v^2}{R}
+		\end{equation*}
+		
+		Onde o $v$ é a velocidade tengencial e $R$ é o raio.
+		
+		A velocidade tangencial $v$ pode ser relacionada ao período $T$ pela fórmula:
+		
+		\begin{equation*}
+			v = \frac{2 \cdot \pi \cdot R}{T}
+		\end{equation*}
+		
+		Substituindo essa expressão na fórmula da aceleração centrípeta, obtemos:
+		
+		\begin{equation*}
+			a_c = \frac{4 \cdot \pi^2 \cdot R}{T^2}
+		\end{equation*}
+		
+		Onde $a_c = $ aceleração centrípeta, $R = 7,0m$, $T = periodo$. Rearranjando a fórmula para encontrar o período T, temos:
+		
+		\begin{equation*}
+			T = \sqrt{\frac{4 \cdot \pi^2 \cdot R}{a_c}}
+		\end{equation*}
+		
+		i) Substituindo o $a_c = 3,0 \cdot 9,8 m/s^2$.
+		
+		\begin{equation*}
+			T = \sqrt{\frac{4 \cdot 9,87 \cdot 7,0m}{29,4m/s^2}}
+		\end{equation*}
+		\begin{equation*}
+			T \approx 3,06s
+		\end{equation*}
+		
+		i) Substituindo o $a_c = 10,0 \cdot 9,8 m/s^2$.
+		
+		\begin{equation*}
+			T = \sqrt{\frac{4 \cdot 9,87 \cdot 7,0m}{98m/s^2}}
+		\end{equation*}
+		\begin{equation*}
+			T \approx 1,68s
+		\end{equation*}
+		
+		Então, os períodos para as acelerações centrípetas especificadas são aproximadamente 3,06s para 3,0g e 1,68s para 10g.
+		
+		\vspace{2em}
+		
+		\textbf{17.}  Uma roda-gigante possui raio de 14,0 m e gira no sentido anti-horário. Em dado instante, um passageiro na periferia da roda e passando no ponto mais baixo do movimento circular, move-se a 3,0 m/s e está ganhando velocidade com uma taxa de 0,500 m/s². a) Determine o módulo, a direção e o sentido da aceleração do passageiro nesse instante. b) faça um desenho da roda-gigante e do passageiro, mostrando a velocidade e os vetores de aceleração dele.
+		
+		\textbf{resposta:}
+		
+		\vspace{2em}
+		
+		\textbf{18.}  Uma canoa possui velocidade de 0,40 m/s do sul para o leste em relação a Terra. A canoa se desloca em um rio que escoa a 0,50 m/s do oeste para leste em relação a Terra. Determine o módulo, a direção e o sentido da velocidade da canoa em relação ao rio.
+		
+		\textbf{resposta:}
+		
+		Para determinar a velocidade da canoa em relação ao rio, precisamos fazer uma análise vetorial das velocidades envolvidas. Vamos decompor e calcular as velocidades relativas.
+		
+		\begin{equation*}
+			\vec{v}_{canoa/Terra} = 0,40m/s
+		\end{equation*}
+		\begin{equation*}
+			\vec{v}_{rio/Terra} = 0,50m/s
+		\end{equation*}
+		
+		i) Decomposição dos vetores
+		
+		1) Velocidade da canoa em relação a terra:
+		\begin{equation*}
+			\vec{v}_{canoa/Terra} = (0,40m/s, 0)
+		\end{equation*}
+		
+		2) Velocidade do rio em relação a terra:
+		\begin{equation*}
+			\vec{v}_{canoa/Terra} = (0,50m/s, 0)
+		\end{equation*}
+		
+		ii) Determinando a velocidade da canoa em relação ao rio
+		
+		2) Velocidade do rio em relação a terra:
+		\begin{equation*}
+			\vec{v}_{canoa/rio} = \vec{v}_{canoa/Terra} - \vec{v}_{canoa/Terra}
+		\end{equation*}
+		\begin{equation*}
+			\vec{v}_{canoa/rio} = (0,40m/s, 0) - (0,50m/s, 0) = (-0,10m/s,0)
+		\end{equation*}
+		
+		iii) O módulo da canoa em realção ao rio
+		
+		\begin{equation*}
+			|\vec{v}_{canoa/rio}| = \sqrt{(-0,10)^2 + 0^2} = 0,10m/s
+		\end{equation*}
+		
+		iv) Direção e sentido do vetor da canoa em relação ao rio. O vetor $\vec{v}_{canoa/rio}$ é $-0,10m/s$ ao longo do eixo x, o que indica que a canoa está se movendo 0,10 m/s para o oeste em relação ao rio.
+		
+		\vspace{2em}
+		
+		\textbf{19.} O piloto de um avião deseja voar de leste para oeste. Um vento de 80,0 km/h sopra do norte para o sul. a) Se a velocidade do avião em relação ao ar é igual a 320 km/h qual deve ser a direção escolhida pelo piloto? b) Qual é a velocidade do avião em relação ao solo? Ilustre sua solução com um diagrama vetorial.
+		
+		\textbf{resposta:}
+		
+		\vspace{2em}
+		
+		\textbf{20.}  Um professor de física faz loucas proezas em suas horas vagas. Sua última façanha foi saltar sobre um rio com a sua motocicleta. A rampa de decolagem era inclinada de 53,0º, a largura do rio era de 40,0 m, e a outra margem estava a 15,0 m abaixo do nível da rampa. O rio estava a 100 m abaixo do nível da rampa. Despreze a resistência do ar. a) Qual deveria ser sua velocidade para que ele pudesse alcançar a outra margem sem cair no rio? b) Caso sua velocidade fosse igual à metade do valor encontrado em (a), aonde ele cairia?
+		
+		\textbf{resposta:}
 	\end{flushleft}
 \end{document}
